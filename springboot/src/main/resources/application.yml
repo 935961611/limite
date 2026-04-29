@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: rate-limiter
+  profiles:
+    active: dev
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false
+    encoding: UTF-8
+
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+logging:
+  level:
+    root: INFO
+    com.example.ratelimiter: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"

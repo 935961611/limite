@@ -115,3 +115,25 @@ java com.example.ratelimiter.Simulation
 - 生产环境建议使用更精确的定时器
 - 高并发场景可考虑分片或分布式限流
 - 内存使用：各限流器维护独立计数器，注意内存占用
+
+---
+
+## 📚 项目版本
+
+本项目有两个版本，满足不同学习需求：
+
+### 1️⃣ 纯Java版本（当前）
+- **位置**：`d:\project\limite\`
+- **启动**：`java com.example.ratelimiter.Simulation`
+- **难度**：⭐⭐ 初级
+- **特点**：专注算法原理，5秒快速启动
+- **学习价值**：深入理解限流原理
+
+### 2️⃣ Spring Boot版本
+- **位置**：`d:\project\limite\springboot\`
+- **启动**：`mvn spring-boot:run`
+- **难度**：⭐⭐⭐ 中级
+- **特点**：完整Web应用，有前端界面和用户认证
+- **学习价值**：企业级应用开发
+
+📖 **版本对比详见**：[VERSION_COMPARISON.md](VERSION_COMPARISON.md)

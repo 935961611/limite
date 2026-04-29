@@ -179,13 +179,51 @@
 ## 如何开始学习？
 
 ### 步骤1：运行项目
-```bash
-# 编译代码
-javac -encoding UTF-8 -d . src/main/java/com/example/ratelimiter/*.java
 
-# 运行演示
+**别担心，这个项目不需要服务器！** 它就是一个普通的Java程序，可以直接在你的电脑上运行。
+
+#### 第一步：编译代码
+打开命令行工具（Windows用户用PowerShell或CMD），进入项目文件夹：
+
+```bash
+cd d:\project\limite
+```
+
+然后输入编译命令：
+```bash
+javac -encoding UTF-8 -d . src/main/java/com/example/ratelimiter/*.java
+```
+
+**解释一下这个命令：**
+- `javac`：Java编译器，把.java文件变成.class文件
+- `-encoding UTF-8`：指定编码，因为代码里有中文注释
+- `-d .`：把编译后的文件放在当前目录
+- `src/main/java/com/example/ratelimiter/*.java`：编译所有Java文件
+
+编译成功后，你会看到项目文件夹里多了很多.class文件。
+
+#### 第二步：运行程序
+编译完成后，输入运行命令：
+
+```bash
 java com.example.ratelimiter.Simulation
 ```
+
+**解释一下：**
+- `java`：运行Java程序
+- `com.example.ratelimiter.Simulation`：主类名（就是包含main方法的类）
+
+程序会自动运行各种测试场景，显示限流效果！
+
+#### 如果出错了怎么办？
+1. **编码错误**：确保用 `-encoding UTF-8`
+2. **找不到类**：确保编译成功，生成了.class文件
+3. **路径错误**：确保在正确的文件夹里
+
+**小贴士：**
+- 这个项目不需要安装任何服务器或数据库
+- 它就是一个独立的Java程序
+- 运行后会显示很多日志，告诉你哪些请求被放行，哪些被拦截
 
 ### 步骤2：观察输出
 - 看哪些请求被放行
